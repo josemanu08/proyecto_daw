@@ -3,6 +3,7 @@
 
 Proyecto que une la librería psn-api y la API OpenXbl
 
+
 ## Gía de uso
 
 Hola José Alberto, esta es una pequeña guía indico como correr las partes que componen el prototipo del proyecto.
@@ -31,9 +32,18 @@ npm run dev
 ```
 ## Ejemplo de uso
 La App React tiene por defecto mis credenciales introducidas (usuarios de PlayStation y de Xbox), para probar más usuarios puedes usar algunos de estos nombres de ejemplo:  
-- xXCHRISCHETOXx
-- DatilonFG
-- xXTheWolfXx
+
+- #### PSN-API
+  - xXCHRISCHETOXx
+  - DatilonFG
+  - xXTheWolf55Xx
+---
+- #### OPENXBL
+  - xXCHRISCHETOXx
+  - mtf66order
+
+Por otro lado los enpoints de la api de Express.js son:  
+
 
 ## Authors
 
