@@ -1,0 +1,304 @@
+.userOptions{
+    width: 100vw;
+    list-style: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    background-color: #151515;
+}
+
+@media (max-width:750px){
+    .userOptions li,  .userOptions label {
+        width: 100%;
+    }
+}
+
+.playStationOptionToggle{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: .5rem;
+    border: 2px solid rgb(12, 133, 247);
+    width: 50rem;
+    font-weight: 700;
+    cursor: pointer;
+    /*background-color: #c6def7;*/
+    background-color: #2d3349;
+    color: white;
+}
+
+.xboxOptionToggle{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid green;
+    width: 50rem;
+    font-weight: 700;
+    cursor: pointer;
+    background-color: rgb(173, 241, 173);
+    background-color: #2d3349;
+    color: white;
+}
+
+.PSN{
+    background-color: rgb(36, 127, 232);
+    color: white;
+    padding: .5rem;
+    width: 6rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+.XBL{
+    background-color: rgb(19, 162, 17);
+    color: white;
+    padding: .5rem;
+    width: 6rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+.playFirstSection{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.xboxFirstSection{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+/*Creación de la lógica del acordeón*/
+.playConfigContent, .xboxConfigContent{
+    height: 0px;
+    overflow: hidden;
+    border: 0px solid black;
+    transition: .2s height, .2s border-width;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    gap: .5rem;
+}
+
+#playChecked:checked ~ .playConfigContent,
+#xboxCheck:checked ~ .xboxConfigContent{
+    height: 15rem;
+    border-width: 1px;
+}
+.arrow-play, .arrow-xbox{
+    width: 3rem;
+    position: relative;
+    text-align: center;
+    transition: .3s width, .3s background-color;
+}
+
+.arrow-play::after, .arrow-xbox::after{
+    font-size: x-large;
+    content: '+';
+}
+
+#playChecked:checked  ~ label > .arrow-play::after{
+    content: '-';
+}
+
+#xboxCheck:checked  ~ label > .arrow-xbox::after{
+    content: '-';
+}
+
+
+
+/*Formularios*/
+
+.playConfigContent{
+    background-color: rgb(232, 241, 250);
+}
+
+.xboxConfigContent{
+    background-color: rgb(203, 245, 203);
+}
+
+.input-username{
+    padding: .3rem;
+    width: 15rem;
+    font-size: large;
+}
+
+.submit-button{
+    font-size: large;
+    border: none;
+    position: absolute;
+    bottom: .5rem;
+    width: 90%;
+    padding: .2rem;
+    cursor: pointer;
+    background-color: rgba(76, 250, 154, 0.333);
+}
+
+.submit-button:hover{
+    outline: 1px solid rgb(2, 49, 23);
+}
+
+.playParameterInfo, .xboxParameterInfo{
+    position: absolute;
+    padding: .5rem;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(255, 255, 255);
+}
+
+/*Botones e inputs del formulario*/
+
+.playParameterInfo p{
+    font-size: 18px;
+    text-decoration: underline;
+    text-underline-offset: 7px;
+    text-decoration-color: rgb(36, 127, 232);
+    text-decoration-thickness: 5px 
+}
+
+.playParameterInfo button, .xboxParameterInfo button{
+    cursor: pointer;
+    width: 6rem;
+    padding: .1rem;
+    font-size: 15px
+}
+
+.erase-button{
+    border-radius: 20%;
+    border: none;
+    padding: .3rem .5rem .3rem .5rem;
+    font-size: large;
+    background-color: rgb(241, 61, 61);
+    color: white;
+    cursor: pointer;
+}
+
+
+@media (max-width: 1280px){
+    #playChecked:checked ~ .playConfigContent,
+    #xboxCheck:checked ~ .xboxConfigContent{
+        height: 10rem;
+        border-width: 1px;
+    }
+}
+
+
+
+/* ----------------------------------------- */
+.user-options-b{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+}
+
+.options-container{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem; 
+    max-width: 60%;
+}
+
+.settings-title{
+    text-align: left;
+}
+
+.connect-platforms{
+    display: flex;
+    gap: 1rem;
+}
+
+.connect-component{
+    background-color: rgb(32, 33, 35);
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    border-radius: 10px;
+    min-height: 300px;
+    justify-content: space-between;
+}
+
+.setting-main-imgs{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.settings-list li {
+    text-decoration: underline;
+    text-underline-offset: .5rem;
+}
+
+.settings-connect-button{
+    padding: .6rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.settings-connect-button:hover{
+    background-color: #151515;
+    color: white;
+}
+
+.connected{
+
+}
+
+.form-container{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    gap: 2rem;
+    position: relative;
+    padding: 1rem;
+}
+
+.settings-form{
+    display: flex;
+    gap: 1rem;
+}
+
+.settings-form input{
+    padding: 1rem;
+    background-color: #232323;
+    border: none;
+    color: white;
+    width: 20rem
+}
+
+.settings-form button{
+    padding: .5rem 3rem .5rem 3rem;
+    border: none;
+    cursor: pointer;
+}
+
+.settings-form button:hover{
+    background-color: #2222;
+    color: white;
+}
+
+.return-to-settings{
+    position: absolute;
+    top: .5rem;
+    right: .5rem;
+    color: white;
+}
+
+.return-to-settings:hover{
+    color: gray;
+}

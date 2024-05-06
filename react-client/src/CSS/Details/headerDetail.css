@@ -1,0 +1,286 @@
+.goBack{
+    position: fixed;
+    top: .5rem;
+    right: .5rem;
+    padding: .7rem;
+    background-color: rgb(0, 0, 0);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .5s padding;
+    color: rgb(87, 191, 87);
+}
+
+
+.detailBody{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgb(87, 191, 87);
+    background-image: linear-gradient(rgb(87, 191, 87) 20%, rgb(59, 62, 68) 80%);
+    background-size: cover;
+    background-attachment: fixed;
+    gap: .5rem;
+    min-height: 100vh;
+    /*OJETE*/
+}
+
+.detailBody .bodyPlayStation{
+    background-size: contain;
+    background-color: pink;
+}
+
+
+.detailsHeader{
+    display: flex;
+    justify-content: space-around;
+    height: min-content;
+    background-color: #18191ab0;
+    padding: 2rem;
+    box-sizing: border-box;
+    width: 100%;
+    gap: 1rem;
+    backdrop-filter: blur(10px);
+}
+
+/*img SLIDER*/
+.titleImageContainer{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.images{
+    display: flex;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    width: 20rem;
+    border-radius: 10px;
+}
+
+
+.images:hover ~ .prevImage,  .images:hover ~ .nextImage{
+    color: rgba(253, 253, 253, 0.841);
+}
+
+.prevImage:hover, .nextImage:hover{
+    color: rgba(253, 253, 253, 0.841);
+}
+
+.images img{
+    height: 20rem;
+    width: 20rem;
+    object-fit: cover;
+}
+
+.prevImage, .nextImage{
+    background-color: #18191a00;
+    border: none;
+    color: rgba(253, 253, 253, 0.479);
+}
+.prevImage{
+    position: absolute;
+    left: .5rem;
+    top: 50%;
+    cursor: pointer;
+}
+
+.nextImage{
+    position: absolute;
+    right: .5rem;
+    top: 50%;
+    cursor: pointer;
+}
+
+@media (min-width: 1500px){
+}
+@media (max-width: 700px){
+    .detailsHeader{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .detailsHeader .titleInfoContainer{
+        max-width: 100%;
+    }
+}
+
+/*img SLIDER*/
+
+/*div con backgroundImg*/
+
+/*.titleImageContainer{
+    min-width: 40%;
+    max-width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.titleImageContainer .img{
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+}*/
+
+
+.titleInfoContainer{
+    min-width: 40%;
+    max-width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.detailsHeaderSection{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.titleName{
+    font-size: xx-large;
+    color: white;
+}
+
+.infoName{
+    color: gray;
+}
+
+.info{
+    color: white;
+}
+
+.gameInfo{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-top: .5rem;
+}
+
+.xboxTitleDescription{
+    text-align: start;
+    position: relative;
+}
+
+.closedDesc{
+    height: 75px;
+    overflow: hidden;
+    background-image: linear-gradient(#18191A 60%, rgba(78, 73, 73, 0.479) );
+}
+
+.openedDesc{
+    height: min-content;
+}
+
+.open-close-desc{
+    position: absolute;
+    right: .5rem;
+    bottom: .5rem;
+    border: none;
+    background-color: #18191a00;
+    color: rgba(255, 255, 255, 0.714);
+    cursor: pointer;
+    transition: .5s background-color, .5s color;
+}
+
+.open-close-desc:hover{
+    background-color: #18191a77;
+    color: rgba(255, 255, 255, 0.919);   
+}
+
+.openedDesc .open-close-desc{
+    display: none;
+}
+
+.closedDesc .open-close-desc{
+    display: unset;
+}
+
+.titleInfoContainer > button{
+    width: 5rem;
+    padding: .7rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 7px;
+    background-color: #007738;
+    font-size: medium;
+}
+
+.titleInfoContainer > button a {
+    color: white;
+}
+
+.categories{
+    align-self: center;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: large;
+}
+
+.categories li {
+    position: relative;
+    cursor: pointer;
+}
+
+.categories li::after{
+    content: '';
+    background-color: #007738;
+    position: absolute;   
+    bottom: -.5rem;
+    right: 50%;
+    transform: translateX(50%);
+    height: 2px;
+    width: 60%;
+    transition: .5s width;
+}
+
+.categories li:hover::after{
+    width: 100%;
+}
+
+/*playStation*/
+
+.bodyPlayStation{
+    background-color: rgb(0, 55, 255);
+    background-image: linear-gradient(rgb(0, 55, 255) 20%, rgb(59, 62, 68) 80%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.playStationCategories li::after{
+    background-color: rgb(0, 55, 255);
+}
+
+.goBackPlayStation{
+    color: rgb(0, 55, 255);
+}
+
+.scrollDesc{
+    height: 150px;
+    overflow-y: scroll;
+}
+
+::-webkit-scrollbar{
+    width: .3rem;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #cfcece;
+    height: 60px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #eee5e5;
+}
+
+body{
+    background-color: #222;
+}

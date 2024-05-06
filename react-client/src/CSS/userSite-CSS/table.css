@@ -1,0 +1,189 @@
+.gamesTable{
+    text-align: center;
+    width: 100%;
+    max-height: 100%;
+    border-collapse: collapse;
+}
+
+.gamesTable tr:nth-child(even){
+    /*border-bottom: .5px solid rgb(88, 88, 88);*/
+    background-color: #2d3349;
+}
+
+.gamesTable tr:nth-child(odd){
+    background-color: #222;
+}
+
+.table-container{
+    height: 100%;
+    overflow-y: scroll;
+    width: 100%;
+    align-self: center;
+}
+
+@media (max-width:768px){
+    .table-container{
+        width: 100%;
+    }
+}
+
+.gamesTable tr{
+    transition: 0.05s transform;
+}
+
+.gamesTable tr:hover{
+    transform: translateY(-5px);
+    box-shadow: 10px 10px 10px #0f0f0f;
+}
+
+.table-container::-webkit-scrollbar{
+    width: 7px;
+}
+
+.table-container::-webkit-scrollbar-track {
+    background-color: rgb(33, 33, 33);
+}
+
+.table-container::-webkit-scrollbar-thumb {
+    background-color: #cfcece;
+    border-radius: 3px;
+    height: 60px;
+}
+
+.table-container::-webkit-scrollbar-thumb:hover {
+    background-color: #eee5e5;
+}
+
+/*-------------------------------------*/
+
+.gamesTable td{
+    padding: .5rem;
+    position: relative;
+    cursor: pointer;
+}
+
+.playItem{
+    /*background-color: #c6def7;*/
+    background-color: rgb(0, 115, 255, 0.568);
+    background-color: #18191A;
+    color: white;
+}
+
+/*.playItem:hover{
+    background-color: #4598f0;
+    color: black;
+}*/
+
+.xboxItem{
+    /*background-color: rgb(173, 241, 173);*/
+    color: white;
+    background-color: rgb(91, 213, 91);
+    background-color: rgba(16, 118, 28, 0.568);
+    background-color: #18191A;
+}
+
+/*.xboxItem:hover{
+    background-color: rgb(43, 151, 43);
+}*/
+
+.xboxItem .icon {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.playItem .icon {
+    object-fit: cover;
+}
+
+.xboxItem:hover .icon{
+    color: rgb(13, 195, 13);
+}
+
+.icon{
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 100px;
+}
+.mainInfo{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: large;
+}
+
+.subInfo{
+    display: flex;
+    flex-direction: column;
+    align-items: last baseline;
+}
+
+.trophieNumber{
+    font-weight: 650;
+}
+
+/*04/03/2024*/
+
+.platformInfo{
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    gap: .5rem;
+}
+
+.detailsColumn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.getDetails{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: unset;
+    color: white;
+    padding: .5rem;
+    border-radius: 5px;
+}
+
+.getDetails:hover{
+    outline: 1px solid rgb(255, 248, 248);
+}
+
+.platformInfo p{
+    border: 1px solid black;
+    padding: 0rem 0.5rem 0rem 0.5rem;
+    font-size: small;
+}
+
+.PC{
+    background-color: rgb(84, 164, 130);
+    color: white;
+}
+
+.XboxSeries{
+    background-color: rgb(59, 164, 47);
+    color: white;
+}
+
+.XboxOne{
+    background-color: rgb(56, 231, 56);  
+    color: white;  
+}
+
+.PS4{
+    background-color: rgb(67, 67, 255);
+    color: white;
+}
+
+.PSVITA{
+    background-color:#29a8fc;
+    color: white;
+}
+
+.PS3{
+    background-color: #6576b4;
+    color: white;
+}

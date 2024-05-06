@@ -1,0 +1,64 @@
+.header{
+    color: white;
+    display: flex;
+    padding: 1rem 3rem 1rem 3rem;
+    gap: 2rem;
+    align-items: center;
+    width: 100%;
+    transition: .5s gap, .5s background-color, .5s color, .5s position;
+}
+
+.header > p {
+    text-wrap: nowrap;
+}
+
+.searchBar-container{
+    width: 100%;
+}
+
+.searchBar{
+    background-color: #1b1b1b;
+    color: black;
+    border: none;
+    border-radius: 100px;
+    width: 100%;
+    padding: 1rem;
+    height: 2.5rem;
+    transition: .5s background-color;
+}
+
+.searchBar:focus, .searchBar:hover{
+    background-color: white;
+    z-index: 100
+}
+
+.proyect-title{
+    font-size: x-large;
+    font-weight: 600;
+}
+
+.gamer-range{
+    font-size: small;
+    background-color: white;
+    padding: .1rem;
+    color: #151515;
+    border-radius: 3px;
+}
+
+.results{
+    z-index: 100;
+}
+
+/* Scroll Action */
+
+.scrolling{
+    position: sticky;
+    top: 0px;
+    background-color: rgb(213, 230, 241);
+    z-index: 10;
+    gap: 1.5rem;
+}
+
+.scrolling > p {
+    color: black;
+}
