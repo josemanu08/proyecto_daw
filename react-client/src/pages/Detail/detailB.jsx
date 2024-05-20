@@ -17,7 +17,7 @@ export const DetailsB = () => {
   const { isLoading, trophyData } = useTrophyData(params, location.pathname)
   return (
     !trophyData || isLoading
-      ? '🐱'
+      ? <div className="lds-dual-ring"></div>
       : (
         <>
         <div className="detail-view-container">

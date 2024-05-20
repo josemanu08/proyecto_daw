@@ -14,7 +14,9 @@ export const useShowMore = (length) => {
 export const SeriesGames = () => {
   const { gameDetail } = useGameDetailsStore()
   const { maxIndex, changeIndex } = useShowMore(gameDetail?.gi?.series?.length)
+  // gameDetail?.gi?.series?.length
   return (
+    !!gameDetail?.gi?.series?.length &&
         <ul className='series-section'>
             {
                 gameDetail

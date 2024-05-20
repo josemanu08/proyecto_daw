@@ -53,7 +53,7 @@ const handleLink = (gameInfo) => {
 export default function GameBodyItem ({ gameInfo }) {
   return (
     <li className='game-body-item'>
-        <div className="game-img-container">
+        <div style={{ padding: '.5rem' }} className="game-img-container">
             <img src={gameInfo?.icon} alt="" />
         </div>
         <div className="body-content">
@@ -71,7 +71,7 @@ export default function GameBodyItem ({ gameInfo }) {
         </div>
         {
             !gameInfo.percentaje
-              ? <div >🥥</div>
+              ? <div >❌</div>
               : <div
                 className="progress"
                 style={{

@@ -9,8 +9,9 @@ import {
 } from 'psn-api'
 import fs from 'node:fs/promises'
 import expDate from '../keyInfo/expDate.json' assert {type: 'json'}
+import token from '../keyInfo/authPsn.json' assert {type: 'json'}
 
-export const uploadTokenAuth = async (token) => {
+export const uploadTokenAuth = async (req, res, next) => {
   if (new Date().getTime() > expDate.expDate) {
     const newAuth = await exchangeRefreshTokenForAuthTokens(token.refreshToken)
 
@@ -19,10 +20,11 @@ export const uploadTokenAuth = async (token) => {
 
     await fs.writeFile('src\\keyInfo\\authPsn.json', JSON.stringify(newAuth))
 
-    return newAuth
+    console.log('nuevo token')
+    next()
   } else {
     console.log('Por ahora va bien la cosa')
-    return token
+    next()
   }
 }
 

@@ -18,6 +18,7 @@
 @import url('./CSS/Details/modal-sticky-top.css');
 @import url('./CSS/Details/series-games.css');
 @import url('./CSS/Details/show-more.css');
+@import url('./CSS/Spinner.css');
 *{
     box-sizing: border-box;
     margin: 0%;
