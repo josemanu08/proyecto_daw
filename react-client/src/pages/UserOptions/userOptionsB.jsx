@@ -2,7 +2,7 @@ import React from 'react'
 import { ConnectComponent } from './components/ConnectComponent'
 export const UserOptionsB = () => {
   return (
-        <div className='user-options-b'>
+        <div className='user-options-b' style={{ backgroundColor: '#151515' }}>
             <div className="options-container">
                 {/* <h1 className='settings-title'>Settings</h1>
                 <ul className='settings-list'>

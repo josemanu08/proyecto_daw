@@ -18,6 +18,13 @@
 .user-img img{
     width: 9rem;
     border-radius: 200px;
+    animation: user-img-animation normal ease-in .1s;
+}
+
+@keyframes user-img-animation {
+    0%{
+       transform: translateX(-15%); 
+    }
 }
 
 .user-info-container{
@@ -60,6 +67,11 @@
 .trophies img {
     width: 3rem;
 }
+
+.toggle-user:hover{
+    transform: translateY(-10px);
+}
+
 /* 
 .playUserInfo > li img{
     width: 3rem;

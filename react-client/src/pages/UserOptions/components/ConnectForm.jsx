@@ -35,7 +35,7 @@ export const ConnectForm = () => {
   }
 
   return (
-        <div className='user-options-b'>
+        <div className='user-options-b' style={{ backgroundColor: '#151515' }}>
             <div className="form-container">
             <NavLink to='/userOptions' className='return-to-settings'>
             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" className="bi bi-x-circle-fill" viewBox="0 0 16 16">

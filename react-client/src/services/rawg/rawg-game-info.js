@@ -13,6 +13,8 @@ export const fetchAllGameInfo = async (name) => {
   // console.log('FIRST_RAWG_RESPONSE ', responseTextInfo)
   const screenImageInfo = await firstResponse.json()
 
+  console.log('first: ', screenImageInfo)
+
   result.screen_shots = [...screenImageInfo.results[0].short_screenshots]
   result.id = screenImageInfo.results[0].id
   result.genres = screenImageInfo.results[0].genres.map(genre => genre.name)
@@ -24,6 +26,8 @@ export const fetchAllGameInfo = async (name) => {
     }
   })
   const descriptionInfo = await secondResponse.json()
+
+  console.log('second: ', descriptionInfo)
 
   const seriesRes = await fetch(`/api/games/${result.id}/game-series?key=${RAWG_API_KEY}`)
   const series = await seriesRes.json()
