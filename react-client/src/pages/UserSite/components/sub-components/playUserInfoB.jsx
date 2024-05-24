@@ -8,7 +8,7 @@ export const PlayUserInfoB = () => {
       ? 'Wating...'
       : <div className='user-info-container'>
             <div className='user-img'>
-                <img src={playStationData.psnProfile.icon} />
+                <img loading='lazy' src={playStationData.psnProfile.icon} />
             </div>
             <div className='user-trophy-name-info'>
                 <div className='username-info'>

@@ -10,7 +10,7 @@ export const XboxUserInfoB = () => {
       ? 'Waiting...'
       : <div className='user-info-container'>
     <div className='user-img'>
-        <img src={xboxData.xblProfile.icon} />
+        <img loading='lazy' src={xboxData.xblProfile.icon} />
     </div>
     <div className='user-trophy-name-info'>
         <div className='username-info'>
